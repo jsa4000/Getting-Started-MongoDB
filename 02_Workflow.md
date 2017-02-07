@@ -4,24 +4,24 @@
 ##################
 
 ****************
-* INSTALLATION *
+* INSTALLATION
 ****************
 
 Installation is srightforward. Just extract the binaries or install the desired package onto the computer.
 	
-	$.\bin\mongod.exe --dbpath "d:\set up\mongodb\data"			# To init the data base
+	>$.\bin\mongod.exe --dbpath "d:\set up\mongodb\data"			# To init the data base
 
-	$.\bin\mongod.exe --auth --dbpath "d:\set up\mongodb\data"	# To init the data base with auth mode enabled
+	>$.\bin\mongod.exe --auth --dbpath "d:\set up\mongodb\data"	# To init the data base with auth mode enabled
 
-	$.\bin\mongod --auth --port 27017 --dbpath /data/db1		# Run the database with Auth enabled, current port and database path 
+	>$.\bin\mongod --auth --port 27017 --dbpath /data/db1		# Run the database with Auth enabled, current port and database path 
 
-	$.\bin\mongo.exe 											# To access to the data base (client)
+	>$.\bin\mongo.exe 											# To access to the data base (client)
 
-	Data base will be deployed at "mongodb://localhost:27017"
+	>Data base will be deployed at "mongodb://localhost:27017"
 
 
 ***************
-* DATA BASES *
+* DATA BASES
 ***************
 
 	>show dbs						 # Show all created data bases in mongodb. Data base must have some data already to show up.
@@ -34,7 +34,7 @@ Installation is srightforward. Just extract the binaries or install the desired 
 
 
 *********
-* USERS *
+* USERS
 *********
 
 	>db.auth( <username>, <password> )															# To authenticate into the data base
@@ -50,7 +50,7 @@ Installation is srightforward. Just extract the binaries or install the desired 
 
 
 ***************
-* COLLECTIONS *
+* COLLECTIONS
 ***************
 
 	>show collections								 # Show all collections created in the current db 
@@ -60,7 +60,7 @@ Installation is srightforward. Just extract the binaries or install the desired 
 	>db.createCollection("films")					 #Creates a new collection. Not neccesary since it will be created autmatically when insert the first item.
 	
 *************
-* DOCUMENTS *
+* DOCUMENTS 
 *************
 
 	 - INSERT
@@ -105,7 +105,7 @@ Installation is srightforward. Just extract the binaries or install the desired 
 
 
 **********
-* BACKUP *
+* BACKUP 
 **********
 
 	$.\bin\mongodump.exe --db test													# This will create a dump of the database in json format creating also a "\dump" folder. The database is given in the paramater.
@@ -115,7 +115,7 @@ Installation is srightforward. Just extract the binaries or install the desired 
 	
 
 **************
-* MAP-REDUCE *
+* MAP-REDUCE 
 **************
 
 Accordingly to Wikipedia, MapReduce is a programing model of processing and generating large data sets with a Parallel, Distributed algorithm on a 
@@ -157,7 +157,7 @@ short period of time.
 -the Logical View of Map convert one data pair domain into another data pair domain.  Map(k1,v1) ? list(k2,v2)  -> See it returns a list of key par values
 
 **************
-* EXAMPLE: *
+* EXAMPLE: 
 **************
 	
 - *INPUTS*
