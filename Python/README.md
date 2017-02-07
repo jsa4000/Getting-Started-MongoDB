@@ -150,7 +150,7 @@ The result obtaind from the query is yield into a generator so it must be obtain
 	
 ###2.7 Indexing
 
-###2.7.1 Create Indexes
+####2.7.1 Create Indexes
 
 In order to create the indexes first the index must be created.
 	
@@ -176,7 +176,7 @@ In order to inserte a new article we must provide the index create with the .
 	print (result)
 	print (articles.find().count())
 
-###2.7.3 Remove indexes
+####2.7.3 Remove indexes
 
 Remove the index specified
 
