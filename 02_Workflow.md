@@ -9,13 +9,13 @@
 
  Installation is srightforward. Just extract the binaries or install the desired package onto the computer.
 	
-	>.\bin\mongod.exe --dbpath "d:\set up\mongodb\data"			# To init the data base
+	>\bin\mongod.exe --dbpath "d:\set up\mongodb\data"			# To init the data base
 
-	>.\bin\mongod.exe --auth --dbpath "d:\set up\mongodb\data"	# To init the data base with auth mode enabled
+	>\bin\mongod.exe --auth --dbpath "d:\set up\mongodb\data"	# To init the data base with auth mode enabled
 
-	>.\bin\mongod --auth --port 27017 --dbpath /data/db1		# Run the database with Auth enabled, current port and database path 
+	>\bin\mongod --auth --port 27017 --dbpath /data/db1		# Run the database with Auth enabled, current port and database path 
 
-	>.\bin\mongo.exe 											# To access to the data base (client)
+	>\bin\mongo.exe 											# To access to the data base (client)
 
 	>Data base will be deployed at "mongodb://localhost:27017"
 
@@ -138,9 +138,9 @@ Because the amount of information and the number of sources some data requires t
 - The MapReduce process is divided into two operations: Map and Reduce.
 	
 	Map: is a function that returns a <key, value> pair for each tuple of data stored. This will be chosen depending on the requeriments of the data and the needs.
-		-> Map function is originally created to change the domain of the data into another, more convenient to the main focus and purpose of the data.
-		-> Because the key could not be unique, the Map function will group all the results into a list of values for each key.
-		-> the final result is a list of tuples with a <key,value> pair.
+		> Map function is originally created to change the domain of the data into another, more convenient to the main focus and purpose of the data.
+		> Because the key could not be unique, the Map function will group all the results into a list of values for each key.
+		> the final result is a list of tuples with a <key,value> pair.
 
 	Since the infrastrucutre is originall created to be a networks node base with multiple "workers" and one Master that manage all the process. The system will have
 	a list will all the Maps created for each workers. For this reason the Reduce function takes place.
