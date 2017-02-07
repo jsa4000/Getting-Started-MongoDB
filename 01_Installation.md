@@ -21,12 +21,12 @@
 
  In case you have extracted the mongodb at different location, then go to that path by using command cd FOOLDER/DIR and now run the above given process.
 
- MongoDB requires a data folder to store its files. The default location for the MongoDB data directory is c:\data\db. So you need to create this folder using the Command Prompt. Execute the following command sequence.
+ MongoDB requires a *data folder* to store its files. The default location for the MongoDB data directory is _c:\data\db_. So you need to create this folder using the Command Prompt. Execute the following command sequence.
 
 		C:\>md data
 		C:\md data\db
 
- If you have install the MongoDB at different location, then you need to specify any alternate path for \data\db by setting the path dbpath in mongod.exe. For the same issue following commands.
+ If you have install the MongoDB at different location, then you need to specify any alternate path for _\data\db_ by setting the path dbpath_ in mongod.exe. 
 
 - In command prompt navigate to the bin directory present into the mongodb installation folder. Suppose my installation folder is D:\setup\mongodb
  
@@ -55,17 +55,17 @@
 		// Connection Client
 		D:\setup\mongodb\bin>mongo.exe
 	
-Connection string URL (to connect through mongoose.connect('mongodb://localhost:27017'); )
+- Connection string URL (to connect through mongoose.connect('mongodb://localhost:27017'); )
 	
-	To describe a connection to a replica set named test, with the following mongod hosts:
+ To describe a connection to a replica set named test, with the following mongod hosts:
 
-    db1.example.net on port 27017 and
-    db2.example.net on port 2500.
+		db1.example.net on port 27017 and
+		db2.example.net on port 2500.
 
-	You would use a connection string that resembles the following:
+ You would use a connection string that resembles the following:
 
-	mongodb://db1.example.net,db2.example.net:2500/?replicaSet=test
-	mongodb://localhost:27017/?replicaSet=test or mongodb://localhost:27017
+		mongodb://db1.example.net,db2.example.net:2500/?replicaSet=test
+		mongodb://localhost:27017/?replicaSet=test or mongodb://localhost:27017
 
 ##Refernces 
 
