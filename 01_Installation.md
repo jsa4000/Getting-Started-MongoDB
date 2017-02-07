@@ -4,10 +4,10 @@
 
 - To install the MongoDB on windows, first download the latest release of MongoDB from http://www.mongodb.org/downloads Make sure you get correct version of MongoDB depending upon your windows version. To get your windows version open command prompt and execute following command.
 
-	C:\>wmic os get osarchitecture
-	OSArchitecture
-	64-bit
-	C:\>
+		C:\>wmic os get osarchitecture
+		OSArchitecture
+		64-bit
+		C:\>
 
  > 32-bit versions of MongoDB only support databases smaller than 2GB and suitable only for testing and evaluation purposes.
 
@@ -23,37 +23,37 @@
 
  MongoDB requires a data folder to store its files. The default location for the MongoDB data directory is c:\data\db. So you need to create this folder using the Command Prompt. Execute the following command sequence.
 
- 	C:\>md data
- 	C:\md data\db
+		C:\>md data
+		C:\md data\db
 
  If you have install the MongoDB at different location, then you need to specify any alternate path for \data\db by setting the path dbpath in mongod.exe. For the same issue following commands.
 
 - In command prompt navigate to the bin directory present into the mongodb installation folder. Suppose my installation folder is D:\setup\mongodb
  
- 	C:\Users\XYZ>d:
- 	D:\>cd "setup"
- 	D:\setup>cd mongodb
- 	D:\setup\mongodb>cd bin
- 	D:\setup\mongodb\bin>mongod.exe --dbpath "d:\setup\mongodb\data" 
+		C:\Users\XYZ>d:
+		D:\>cd "setup"
+		D:\setup>cd mongodb
+		D:\setup\mongodb>cd bin
+		D:\setup\mongodb\bin>mongod.exe --dbpath "d:\setup\mongodb\data" 
 
  This will show waiting for connections message on the console output indicates that the mongod.exe process is running successfully.
 
 - Now to run the mongodb you need to open another command prompt and issue the following command.
 	 
-	D:\setup\mongodb\bin>mongo.exe
-	MongoDB shell version: 2.4.6
-	connecting to: test
-	>db.test.save( { a: 1 } )
-	>db.test.find()
-	{ "_id" : ObjectId(5879b0f65a56a454), "a" : 1 }
-	>
+		D:\setup\mongodb\bin>mongo.exe
+		MongoDB shell version: 2.4.6
+		connecting to: test
+		>db.test.save( { a: 1 } )
+		>db.test.find()
+		{ "_id" : ObjectId(5879b0f65a56a454), "a" : 1 }
+		>
 
 - This will show that mongodb is installed and run successfully. Next time when you run mongodb you need to issue only commands.
 
-	// Start Server
-	D:\setup\mongodb\bin>mongod.exe --dbpath "d:\setup\mongodb\data" 
-	// Connection Client
-	D:\setup\mongodb\bin>mongo.exe
+		// Start Server
+		D:\setup\mongodb\bin>mongod.exe --dbpath "d:\setup\mongodb\data" 
+		// Connection Client
+		D:\setup\mongodb\bin>mongo.exe
 	
 Connection string URL (to connect through mongoose.connect('mongodb://localhost:27017'); )
 	
