@@ -1,6 +1,6 @@
 # Installation
 
-## Install MongoDB On Windows
+## Install On Windows
 
 To install the MongoDB on windows, first download the latest release of MongoDB from http://www.mongodb.org/downloads Make sure you get correct version of MongoDB depending upon your windows version. To get your windows version open command prompt and execute following command.
 
@@ -28,20 +28,19 @@ MongoDB requires a data folder to store its files. The default location for the 
 
 If you have install the MongoDB at different location, then you need to specify any alternate path for \data\db by setting the path dbpath in mongod.exe. For the same issue following commands.
 
-In command prompt navigate to the bin directory present into the mongodb installation folder. Suppose my installation folder is D:\set up\mongodb
-
+In command prompt navigate to the bin directory present into the mongodb installation folder. Suppose my installation folder is D:\setup\mongodb
  
 	C:\Users\XYZ>d:
-	D:\>cd "set up"
-	D:\set up>cd mongodb
-	D:\set up\mongodb>cd bin
-	D:\set up\mongodb\bin>mongod.exe --dbpath "d:\set up\mongodb\data" 
+	D:\>cd "setup"
+	D:\setup>cd mongodb
+	D:\setup\mongodb>cd bin
+	D:\setup\mongodb\bin>mongod.exe --dbpath "d:\setup\mongodb\data" 
 
 This will show waiting for connections message on the console output indicates that the mongod.exe process is running successfully.
 
 Now to run the mongodb you need to open another command prompt and issue the following command.
 	 
-	D:\set up\mongodb\bin>mongo.exe
+	D:\setup\mongodb\bin>mongo.exe
 	MongoDB shell version: 2.4.6
 	connecting to: test
 	>db.test.save( { a: 1 } )
@@ -52,9 +51,9 @@ Now to run the mongodb you need to open another command prompt and issue the fol
 This will show that mongodb is installed and run successfully. Next time when you run mongodb you need to issue only commands.
 
 	// Start Server
-	D:\set up\mongodb\bin>mongod.exe --dbpath "d:\set up\mongodb\data" 
+	D:\setup\mongodb\bin>mongod.exe --dbpath "d:\setup\mongodb\data" 
 	// Connection Client
-	D:\set up\mongodb\bin>mongo.exe
+	D:\setup\mongodb\bin>mongo.exe
 	
 Connection string URL (to connect through mongoose.connect('mongodb://localhost:27017'); )
 	
