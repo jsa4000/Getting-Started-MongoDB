@@ -24,7 +24,7 @@
  MongoDB requires a *data folder* to store its files. The default location for the MongoDB data directory is _c:\data\db_. So you need to create this folder using the Command Prompt. Execute the following command sequence.
 
 		C:\>md data
-		C:\md data\db
+		C:\>md data\db
 
  If you have installed the MongoDB at different location, then you need to specify any alternate path for _\data\db_ by setting the path _dbpath_ in mongod.exe. In this case, I will install mongodb in different location.
 
