@@ -50,12 +50,17 @@
 
 - This will show that mongodb is installed and run successfully. Next time when you run mongodb you need to issue only commands.
 
-		// Start Server
+ - Start Server
+ 
 		D:\setup\mongodb\bin>mongod.exe --dbpath "d:\setup\mongodb\data" 
-		// Connection Client
+		
+ - Connection Client
+ 
 		D:\setup\mongodb\bin>mongo.exe
 	
-- Connection string URL (to connect through mongoose.connect('mongodb://localhost:27017'); )
+- Connection string URL 
+
+	> This is used to connect through mongoose or other library. e.j. connect('mongodb://localhost:27017'); 
 	
  To describe a connection to a replica set named test, with the following mongod hosts:
 
