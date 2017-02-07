@@ -11,13 +11,13 @@
 
  > 32-bit versions of MongoDB only support databases smaller than 2GB and suitable only for testing and evaluation purposes.
 
-- Now extract your downloaded file to c:\ drive or any other location. Make sure name of the extracted folder is mongodb-win32-i386-[version] or mongodb-win32-x86_64-[version]. 
+- Now extract your downloaded file to c:\ drive or any other location. Make sure name of the extracted folder is _mongodb-win32-i386-[version]_ or _mongodb-win32-x86_64-[version]_. 
 
 - Now open command prompt and run the following command
 
-	C:\>move mongodb-win64-* mongodb
-	   1 dir(s) moved.
-	C:\>
+		C:\>move mongodb-win64-* mongodb
+		1 dir(s) moved.
+		C:\>
 
  In case you have extracted the mongodb at different location, then go to that path by using command cd FOOLDER/DIR and now run the above given process.
 
