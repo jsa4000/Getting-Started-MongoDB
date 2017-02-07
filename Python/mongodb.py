@@ -2,7 +2,7 @@ import pymongo
 from pymongo import MongoClient as mongodb
 import datetime
 
-# The ideas with this class is to familiarizate with db data bases and operations:
+# The ideas with this class is to familiarize with this database and some of the basic operations:
 #
 # 0. Create new data base
 # 1. Create new collection
