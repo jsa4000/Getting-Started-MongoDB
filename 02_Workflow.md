@@ -7,7 +7,7 @@
 * INSTALLATION *
 ****************
 
-	- Installation is srightforward. Just extract the binaries or install the desired package onto the computer.
+Installation is srightforward. Just extract the binaries or install the desired package onto the computer.
 	
 	$.\bin\mongod.exe --dbpath "d:\set up\mongodb\data"			# To init the data base
 
@@ -89,16 +89,16 @@
 
 		>db.movie.find("name":"tutorials point"}).pretty()		# Find an item. For more operations see http://www.tutorialspoint.com/mongodb/mongodb_query_document.htm
 	
-																	# quality 	{<key>:<value>} 	db.mycol.find({"by":"tutorials point"}).pretty() 	where by = 'tutorials point'
-																	# Less Than 	{<key>:{$lt:<value>}} 	db.mycol.find({"likes":{$lt:50}}).pretty() 	where likes < 50
-																	# Less Than Equals 	{<key>:{$lte:<value>}} 	db.mycol.find({"likes":{$lte:50}}).pretty() 	where likes <= 50
-																	# Greater Than 	{<key>:{$gt:<value>}} 	db.mycol.find({"likes":{$gt:50}}).pretty() 	where likes > 50
-																	# Greater Than Equals 	{<key>:{$gte:<value>}} 	db.mycol.find({"likes":{$gte:50}}).pretty() 	where likes >= 50
-																	# Not Equals 	{<key>:{$ne:<value>}} 	db.mycol.find({"likes":{$ne:50}}).pretty() 	where likes != 50
+			# quality 	{<key>:<value>} 	db.mycol.find({"by":"tutorials point"}).pretty() 	where by = 'tutorials point'
+			# Less Than 	{<key>:{$lt:<value>}} 	db.mycol.find({"likes":{$lt:50}}).pretty() 	where likes < 50
+			# Less Than Equals 	{<key>:{$lte:<value>}} 	db.mycol.find({"likes":{$lte:50}}).pretty() 	where likes <= 50
+			# Greater Than 	{<key>:{$gt:<value>}} 	db.mycol.find({"likes":{$gt:50}}).pretty() 	where likes > 50
+			# Greater Than Equals 	{<key>:{$gte:<value>}} 	db.mycol.find({"likes":{$gte:50}}).pretty() 	where likes >= 50
+			# Not Equals 	{<key>:{$ne:<value>}} 	db.mycol.find({"likes":{$ne:50}}).pretty() 	where likes != 50
 
-																	# AND: db.mycol.find({"by":"tutorials point","title": "MongoDB Overview"}).pretty()
-																	# OR:  db.mycol.find({$or:[{key1: value1}, {key2:value2}]}).pretty()
-																	# AND OR TOGETHER: db.mycol.find({"likes": {$gt:10}, $or: [{"by": "tutorials point"}, {"title": "MongoDB Overview"}]}).pretty()
+			# AND: db.mycol.find({"by":"tutorials point","title": "MongoDB Overview"}).pretty()
+			# OR:  db.mycol.find({$or:[{key1: value1}, {key2:value2}]}).pretty()
+			# AND OR TOGETHER: db.mycol.find({"likes": {$gt:10}, $or: [{"by": "tutorials point"}, {"title": "MongoDB Overview"}]}).pretty()
 
 
 		>db.mycol.find({},{"title":1,_id:0}).sort({"title":-1})		# Sort the find values by title key
@@ -137,18 +137,18 @@ Because the amount of information and the number of sources some data requires t
 
 - The MapReduce process is divided into two operations: Map and Reduce.
 	
-		Map: is a function that returns a <key, value> pair for each tuple of data stored. This will be chosen depending on the requeriments of the data and the needs.
-			-> Map function is originally created to change the domain of the data into another, more convenient to the main focus and purpose of the data.
-			-> Because the key could not be unique, the Map function will group all the results into a list of values for each key.
-			-> the final result is a list of tuples with a <key,value> pair.
+	Map: is a function that returns a <key, value> pair for each tuple of data stored. This will be chosen depending on the requeriments of the data and the needs.
+		-> Map function is originally created to change the domain of the data into another, more convenient to the main focus and purpose of the data.
+		-> Because the key could not be unique, the Map function will group all the results into a list of values for each key.
+		-> the final result is a list of tuples with a <key,value> pair.
 
-		Since the infrastrucutre is originall created to be a networks node base with multiple "workers" and one Master that manage all the process. The system will have
-		a list will all the Maps created for each workers. For this reason the Reduce function takes place.
+	Since the infrastrucutre is originall created to be a networks node base with multiple "workers" and one Master that manage all the process. The system will have
+	a list will all the Maps created for each workers. For this reason the Reduce function takes place.
 
-		(Each Key is located in the same worker node. This step is called (shuffle steps))
+	(Each Key is located in the same worker node. This step is called (shuffle steps))
 
-		Reduce: is another function, that takes each of the <key, list<values>> and generate another value for eeach key. The list of values for each key will depend on the 
-		distributed systems and the number of nodes. 
+	Reduce: is another function, that takes each of the <key, list<values>> and generate another value for eeach key. The list of values for each key will depend on the 
+	distributed systems and the number of nodes. 
 
 - THe idea behind this algorithm isthat  we could have different mappings operatons independent from each other. So we could access to the information that we need in
 short period of time.
@@ -156,58 +156,60 @@ short period of time.
 
 -the Logical View of Map convert one data pair domain into another data pair domain.  Map(k1,v1) ? list(k2,v2)  -> See it returns a list of key par values
 
-
-EXAMPLE:
+**************
+* EXAMPLE: *
+**************
 	
-	INPUTS
+- *INPUTS*
 
-		- We have a document that have words in it. e.g.
-			Line 234 "the cat is on the table"
-			Line 235 "because the bed is broken"
+ - We have a document that have words in it. e.g.
+		Line 234 "the cat is on the table"
+		Line 235 "because the bed is broken"
 
-			# In this case the document are ordered using the following domain.
-			Domain -> Key: number of line
-					  Value: phrase with worids
+		# In this case the document are ordered using the following domain.
+		Domain -> Key: number of line
+				  Value: phrase with worids
 
-	MAP
+- *MAP*
 
-		- For each worker the input will be distributed in parallel to be processed.
+ - For each worker the input will be distributed in parallel to be processed.
 
-		- The pseudocode of the Map function, and for this example, is the following:
+ - The pseudocode of the Map function, and for this example, is the following:
 
-			def map(key, Value)
-				For each word in input
-					# where 1 is the word counter to be used later by the Reduce function... is the simples use case
-					emit (word, 1)						
+		def map(key, Value)
+			For each word in input
+				# where 1 is the word counter to be used later by the Reduce function... is the simples use case
+				emit (word, 1)						
 
-		- This function basically will transform the input domain <key,value> (line, phrase) into another a different domain <word, count>
+ - This function basically will transform the input domain <key,value> (line, phrase) into another a different domain <word, count>
 
-		- Map function will generates the following output in the first iteration:
+ - Map function will generates the following output in the first iteration:
 
-			[(the,1), (cat,1), (is,1), (on,1), (the,1), (table,1), (because,1), (the,1), (bed,1), (is,1), (broken,1)]
+		[(the,1), (cat,1), (is,1), (on,1), (the,1), (table,1), (because,1), (the,1), (bed,1), (is,1), (broken,1)]
 
-		- Each <key, pair> will be grouped into a list.
-			[(the, [1,1]),
-			(cat, [1]),
-			(is, [1,1]),
-			(on, [1]),
-			...
-			(broken, [1]
-			
-			)]
-	REDUCE
+ - Each <key, pair> will be grouped into a list.
+		[(the, [1,1]),
+		(cat, [1]),
+		(is, [1,1]),
+		(on, [1]),
+		...
+		(broken, [1]
+		
+		)]
+		
+- *REDUCE*
 
-		- Finally Reduce function will take the outputs from all the workers and will execute the Reduce function. This function will generate a <key, value> pair element.
+ - Finally Reduce function will take the outputs from all the workers and will execute the Reduce function. This function will generate a <key, value> pair element.
 
-			def reduce (key, list <values>)
-				set count = 0
-				for each item in list <values>
-					count += item
+		def reduce (key, list <values>)
+			set count = 0
+			for each item in list <values>
+				count += item
 
-				emit (key, count)
+			emit (key, count)
 
-		- The output from this function will be:
-			( (the,2), (cat, 1), (is,2), (on, 1), .. , (broken, 1))
+ - The output from this function will be:
+		( (the,2), (cat, 1), (is,2), (on, 1), .. , (broken, 1))
 		
 
 
