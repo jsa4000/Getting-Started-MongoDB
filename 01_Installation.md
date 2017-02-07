@@ -26,9 +26,9 @@
 		C:\>md data
 		C:\md data\db
 
- If you have install the MongoDB at different location, then you need to specify any alternate path for _\data\db_ by setting the path dbpath_ in mongod.exe. 
+ If you have install the MongoDB at different location, then you need to specify any alternate path for _\data\db_ by setting the path _dbpath_ in mongod.exe. In this case, I will install mongodb in different location.
 
-- In command prompt navigate to the bin directory present into the mongodb installation folder. Suppose my installation folder is D:\setup\mongodb
+- In command prompt navigate to the bin directory present into the mongodb installation folder. Suppose my installation folder is _D:\setup\mongodb_
  
 		C:\Users\XYZ>d:
 		D:\>cd "setup"
