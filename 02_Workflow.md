@@ -3,21 +3,21 @@
 ## MONGO BASICS ##
 ##################
 
-****************
+*****************
 * INSTALLATION
-****************
+*****************
 
-Installation is srightforward. Just extract the binaries or install the desired package onto the computer.
+ Installation is srightforward. Just extract the binaries or install the desired package onto the computer.
 	
->$.\bin\mongod.exe --dbpath "d:\set up\mongodb\data"			# To init the data base
+	>.\bin\mongod.exe --dbpath "d:\set up\mongodb\data"			# To init the data base
 
->$.\bin\mongod.exe --auth --dbpath "d:\set up\mongodb\data"	# To init the data base with auth mode enabled
+	>.\bin\mongod.exe --auth --dbpath "d:\set up\mongodb\data"	# To init the data base with auth mode enabled
 
->$.\bin\mongod --auth --port 27017 --dbpath /data/db1		# Run the database with Auth enabled, current port and database path 
+	>.\bin\mongod --auth --port 27017 --dbpath /data/db1		# Run the database with Auth enabled, current port and database path 
 
->$.\bin\mongo.exe 											# To access to the data base (client)
+	>.\bin\mongo.exe 											# To access to the data base (client)
 
->Data base will be deployed at "mongodb://localhost:27017"
+	>Data base will be deployed at "mongodb://localhost:27017"
 
 
 ***************
