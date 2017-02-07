@@ -41,6 +41,7 @@ First you need to import some libraries to be able to connect to MongoDB
 	[u'local', u'test', u'test2']
 
 > Using the following commands you will get an error if you have configured the database like me 
+
 	 db = client.get_default_database() # Error with no database defined
 	 print (db)
 
