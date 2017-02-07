@@ -27,13 +27,13 @@ First you need to import some libraries to be able to connect to MongoDB
 
 ###2.2 Connection
 
-###2.2.1 Connect to an exisisting data base.
+####2.2.1 Connect to an exisisting data base.
 
 	>In my case I installed the server in the current address from local: #mongodb://localhost:27017
 	
 	client = mongodb("mongodb://localhost:27017")
 
-###2.2.2 Connection Get all the databases in the current Client
+####2.2.2 Connection Get all the databases in the current Client
 	
 	dbs = client.database_names()
 	print (dbs)
@@ -44,7 +44,7 @@ First you need to import some libraries to be able to connect to MongoDB
 	db = client.get_default_database() # Error with no database defined
 	print (db)
 
-###2.2.3 Get the current data base.
+####2.2.3 Get the current data base.
 
 	db = client.test
 	db = client["test"]
