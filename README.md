@@ -10,9 +10,9 @@ Any relational database like _Oracle_ or _MySQL_ has a typical schema design tha
 
 - **Schema-less**. MongoDB is a document database in which one collection holds different documents. Number of fields, content and size of the document can differ from one document to another.
 
-- Structure of a single object is clear. Index on any attribute
+- Structure of a single object is clear. **Indexes** can be applied on any attribute.
 
-- **No complex joins** but **Rich queries**.
+- **No complex joins**. **Rich queries**.
 
 - **Deep query-ability**. MongoDB supports dynamic queries on documents using a document-based query language that's nearly as powerful as SQL.
 
@@ -20,7 +20,7 @@ Any relational database like _Oracle_ or _MySQL_ has a typical schema design tha
 
 	>Sharding is a method for distributing data across multiple machines.
 
-- **Ease of scale-out**.  MongoDB is easy to scale.
+- **Ease of scale-out**.  
 
 - **Document Oriented Storage**. Data is stored in the form of JSON style documents so the mapping of application objects to database objects not needed. 
 
