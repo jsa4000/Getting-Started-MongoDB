@@ -38,7 +38,7 @@ short period of time.
 -the Logical View of Map convert one data pair domain into another data pair domain.  Map(k1,v1) ? list(k2,v2)  -> See it returns a list of key par values
 
 ************
-*EXAMPLE: 
+*EXAMPLE: *
 **************
 	
  - *INPUTS*
