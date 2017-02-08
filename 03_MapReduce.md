@@ -43,7 +43,7 @@ EXAMPLE:
 	
  - *INPUTS*
 
- - We have a document that have words in it. e.g.
+ 	- We have a document that have words in it. e.g.
 		Line 234 "the cat is on the table"
 		Line 235 "because the bed is broken"
 
@@ -53,22 +53,22 @@ EXAMPLE:
 
  - *MAP*
 
- - For each worker the input will be distributed in parallel to be processed.
+	 - For each worker the input will be distributed in parallel to be processed.
 
- - The pseudocode of the Map function, and for this example, is the following:
+	 - The pseudocode of the Map function, and for this example, is the following:
 
 		def map(key, Value)
 			For each word in input
 				# where 1 is the word counter to be used later by the Reduce function... is the simples use case
 				emit (word, 1)						
 
- - This function basically will transform the input domain <key,value> (line, phrase) into another a different domain <word, count>
+	 - This function basically will transform the input domain <key,value> (line, phrase) into another a different domain <word, count>
 
- - Map function will generates the following output in the first iteration:
+	 - Map function will generates the following output in the first iteration:
 
 		[(the,1), (cat,1), (is,1), (on,1), (the,1), (table,1), (because,1), (the,1), (bed,1), (is,1), (broken,1)]
 
- - Each <key, pair> will be grouped into a list.
+	 - Each <key, pair> will be grouped into a list.
 		[(the, [1,1]),
 		(cat, [1]),
 		(is, [1,1]),
@@ -80,7 +80,7 @@ EXAMPLE:
 		
  - *REDUCE*
 
- - Finally Reduce function will take the outputs from all the workers and will execute the Reduce function. This function will generate a <key, value> pair element.
+	 - Finally Reduce function will take the outputs from all the workers and will execute the Reduce function. This function will generate a <key, value> pair element.
 
 		def reduce (key, list <values>)
 			set count = 0
@@ -89,7 +89,7 @@ EXAMPLE:
 
 			emit (key, count)
 
- - The output from this function will be:
+	 - The output from this function will be:
 		( (the,2), (cat, 1), (is,2), (on, 1), .. , (broken, 1))
 		
 
