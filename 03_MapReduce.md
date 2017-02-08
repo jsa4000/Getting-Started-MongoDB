@@ -37,10 +37,11 @@ short period of time.
 
 -the Logical View of Map convert one data pair domain into another data pair domain.  Map(k1,v1) ? list(k2,v2)  -> See it returns a list of key par values
 
-* EXAMPLE: 
+************
+*EXAMPLE: 
 **************
 	
-- *INPUTS*
+ - *INPUTS*
 
  - We have a document that have words in it. e.g.
 		Line 234 "the cat is on the table"
@@ -50,7 +51,7 @@ short period of time.
 		Domain -> Key: number of line
 				  Value: phrase with worids
 
-- *MAP*
+ - *MAP*
 
  - For each worker the input will be distributed in parallel to be processed.
 
@@ -77,7 +78,7 @@ short period of time.
 		
 		)]
 		
-- *REDUCE*
+ - *REDUCE*
 
  - Finally Reduce function will take the outputs from all the workers and will execute the Reduce function. This function will generate a <key, value> pair element.
 
