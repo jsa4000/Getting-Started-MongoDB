@@ -1,6 +1,4 @@
-
-##############
-# MAP-REDUCE 
+# Map-Reduce
 ##############
 
 Accordingly to Wikipedia, MapReduce is a programing model of processing and generating large data sets with a Parallel, Distributed algorithm on a 
