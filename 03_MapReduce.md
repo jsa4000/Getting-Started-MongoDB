@@ -44,10 +44,12 @@ EXAMPLE:
  - *INPUTS*
 
  	- We have a document that have words in it. e.g.
+	
 			Line 234 "the cat is on the table"
 			Line 235 "because the bed is broken"
 
-	In this case the document are ordered using the following domain.
+	- In this case the document are ordered using the following domain.
+	
 			Domain -> Key: number of line
 				  Value: phrase with worids
 
