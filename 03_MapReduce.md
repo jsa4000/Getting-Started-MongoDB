@@ -4,7 +4,7 @@
 Accordingly to Wikipedia, MapReduce is a programing model of processing and generating large data sets with a Parallel, Distributed algorithm on a 
 cluster. The input data is processed in pararel between the different workers that will generate the data requiered ofr each step of Mapreduce.
 
->-"Map" step: Each worker node applies the "map()" function to the local data, and writes the output to a temporary storage. A master node ensures that only one copy of redundant input data is processed.
+>- "Map" step: Each worker node applies the "map()" function to the local data, and writes the output to a temporary storage. A master node ensures that only one copy of redundant input data is processed.
   
 >- "Shuffle" step: Worker nodes redistribute data based on the output keys (produced by the "map()" function), such that all data belonging to one key is located on the same worker node.
 
