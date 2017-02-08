@@ -47,7 +47,7 @@ EXAMPLE:
 		Line 234 "the cat is on the table"
 		Line 235 "because the bed is broken"
 
-		# In this case the document are ordered using the following domain.
+	In this case the document are ordered using the following domain.
 		Domain -> Key: number of line
 				  Value: phrase with worids
 
@@ -69,6 +69,7 @@ EXAMPLE:
 		[(the,1), (cat,1), (is,1), (on,1), (the,1), (table,1), (because,1), (the,1), (bed,1), (is,1), (broken,1)]
 
 	 - Each <key, pair> will be grouped into a list.
+	 
 		[(the, [1,1]),
 		(cat, [1]),
 		(is, [1,1]),
@@ -90,6 +91,7 @@ EXAMPLE:
 			emit (key, count)
 
 	 - The output from this function will be:
+	 
 		( (the,2), (cat, 1), (is,2), (on, 1), .. , (broken, 1))
 		
 
