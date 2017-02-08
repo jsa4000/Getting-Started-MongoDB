@@ -1,8 +1,12 @@
 #MongoDB for NodeJS
 
-This example is a basic implementation that uses MongoDb and NodeJS. In this example I will use ExpressJS Framework too. Also, the project will be setup using **Visual Studio Code**.
+This example is a basic implementation that uses **MongoDb** and **NodeJS**. In this example I will use ExpressJS Framework too. Also, the project will be setup using **Visual Studio Code**.
 
-There is **word** to define the Full-Stack of all these frameworks and technologies into one. This is called **MEAN** (MongoDB-ExpressJS-AngularJS-NodeJS) You can install directly by download the full package: https://meanjs.org/
+There is a word to define the Full-Stack of all these frameworks and technologies into one. This is called **MEAN** (MongoDB-ExpressJS-AngularJS-NodeJS) 
+
+![MEAN](https://meanjs.org/img/logo.png)
+
+You can install directly by download the full package: https://meanjs.org/
 There is the *npm* way to import those into your project directly. This is by typing the following command:
     
     npm install -g mean-cli
