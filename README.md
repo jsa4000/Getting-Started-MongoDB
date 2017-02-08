@@ -1,4 +1,4 @@
-# MongDB
+# MongoDB
 
 In this Repository, I will explain the basics of **How to get started using MongoDB**
 
